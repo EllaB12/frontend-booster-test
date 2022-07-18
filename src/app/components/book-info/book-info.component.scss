@@ -23,7 +23,7 @@
 .book-authors {
     display: flex;
     flex-direction: column;
-    color: $light-grey;
+    color: $grey;
 }
 
 .book-rating {
@@ -31,7 +31,7 @@
 
     span {
         margin-right: 2px;
-        color: $light-grey;
+        color: $grey;
 
         &.checked {
             color: orange;

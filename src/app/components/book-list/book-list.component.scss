@@ -2,7 +2,12 @@
 
 .book-list-container {
     display: grid;
-    grid-template-columns: repeat(2, 400px);
     grid-column-gap: $normal-spacing;
     grid-row-gap: $huge-spacing;
+}
+
+@media (min-width: 900px) {
+    .book-list-container { 
+        grid-template-columns: repeat(2, 400px); 
+    }
 }

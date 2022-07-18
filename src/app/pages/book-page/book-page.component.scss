@@ -11,13 +11,13 @@
     background-color: $prime-color;
     padding: $huge-spacing;
     text-align: center;
-    margin-top: $huge-spacing;
-    border-radius: 30px;
+    margin: $huge-spacing $small-spacing;
+    border-radius: $big-radius;
 }
 
 input {
     border: none;
-    border-radius: 6px;
+    border-radius: $small-radius;
     padding: $normal-spacing;
     font-size: $huge-font-size;
     box-shadow: 0 6px 10px 0 rgb(0 0 0 / 10%);
@@ -31,16 +31,31 @@ button {
     background: $button-color;
     color: $white;
     border: none;
-    border-radius: 6px;
+    border-radius: $small-radius;
     padding: $small-spacing $normal-spacing;
     margin-left: -30px;
     font-size: $huge-font-size;
     cursor: pointer;
 }
 
+button:disabled,
+button[disabled]{
+  background-color: $light-grey;
+  color: $grey;
+  cursor: default;
+}
+
 .book-container {
     background: $prime-color;
-    padding: $huge-spacing;
-    margin: $huge-spacing;
+    padding: $large-spacing;
+    margin: 0 $small-spacing $huge-spacing;
     border-radius: 30px;
+}
+
+@media (min-width: 900px) {
+    .book-container { 
+        padding: $huge-spacing;
+        margin: $huge-spacing;
+        margin-top: 0;
+    }
 }
