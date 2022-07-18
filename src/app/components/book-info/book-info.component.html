@@ -1,0 +1,16 @@
+<div class="book-info-container">
+    <img class="book-img" [src]="book.volumeInfo.imageLinks.thumbnail">
+    <div class="book-details">
+        <div class="book-rating">
+            <span *ngFor="let _ of [].constructor(5); let i=index" 
+            class="fa fa-star" [ngClass]="{'checked': i < book.volumeInfo.averageRating}"></span>
+        </div>
+
+        <span class="book-title">{{book.volumeInfo.title}}</span>
+        <div class="book-authors">
+            <span *ngFor="let author of book.volumeInfo.authors">
+                {{author}}
+            </span>
+        </div>
+    </div>
+</div>

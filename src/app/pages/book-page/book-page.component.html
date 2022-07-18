@@ -1,0 +1,12 @@
+<section class="book-search-container">
+    <h1>Find your next reading book</h1>
+    <input placeholder="Titles, author, or topics" [formControl]="searchValue">
+    <button [disabled]="bookForm.invalid" (click)="search()">Search</button>
+</section>
+
+<ng-container *ngIf="books$ | async as books">
+    <section class="book-container">
+        <app-book-list [books]="books"></app-book-list>
+    </section>
+</ng-container>
+

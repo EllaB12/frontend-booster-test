@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-search-container {
+    background-color: #eee9e4;
+    padding: $huge-spacing;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+input {
+    border: none;
+    border-radius: 0.4rem;
+    padding: 16px;
+    font-size: 16px;
+    box-shadow: 0 6px 10px 0 rgb(0 0 0 / 10%);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button {
+    background: #cea35f;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 0.4rem;
+    margin-left: -20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.book-container {
+    background: #eee9e4;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 30px;
+}

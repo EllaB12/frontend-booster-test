@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+
+.book-info-container {
+    display: flex;
+    align-items: center;
+    gap: $normal-spacing;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-img {
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 3px 5px;
+}
+
+.book-title {
+    font-weight: $font-weight;
+    margin-bottom: 8px;
+}
+
+.book-authors {
+    display: flex;
+    flex-direction: column;
+    color: #625d5dde;
+}
+
+.book-rating {
+    margin-bottom: 16px;
+    span {
+        margin-right: 2px;
+        color: #4f5b67;
+
+        &.checked {
+            color: orange;
+          }
+    }
+}
