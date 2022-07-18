@@ -1,6 +1,8 @@
+@import '../../styles//variables.scss';
+
 .book-list-container {
     display: grid;
     grid-template-columns: repeat(2, 400px);
-    grid-column-gap: 16px;
-    grid-row-gap: 32px;
+    grid-column-gap: $normal-spacing;
+    grid-row-gap: $huge-spacing;
 }

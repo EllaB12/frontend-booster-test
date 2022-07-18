@@ -12,26 +12,26 @@
 }
 
 .book-img {
-    box-shadow: rgba(0, 0, 0, 0.10) 0px 3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 3px 5px;
 }
 
 .book-title {
     font-weight: $font-weight;
-    margin-bottom: 8px;
+    margin-bottom: $small-spacing;
 }
 
 .book-authors {
     display: flex;
     flex-direction: column;
-    color: #625d5dde;
+    color: $light-grey;
 }
 
 .book-rating {
-    margin-bottom: 16px;
+    margin-bottom: $normal-spacing;
 
     span {
         margin-right: 2px;
-        color: #4f5b67;
+        color: $light-grey;
 
         &.checked {
             color: orange;

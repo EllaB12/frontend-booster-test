@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+
 :host {
     display: flex;
     flex-direction: column;
@@ -7,18 +8,18 @@
 }
 
 .book-search-container {
-    background-color: #eee9e4;
+    background-color: $prime-color;
     padding: $huge-spacing;
     text-align: center;
-    margin-top: 40px;
+    margin-top: $huge-spacing;
     border-radius: 30px;
 }
 
 input {
     border: none;
-    border-radius: 0.4rem;
-    padding: 16px;
-    font-size: 16px;
+    border-radius: 6px;
+    padding: $normal-spacing;
+    font-size: $huge-font-size;
     box-shadow: 0 6px 10px 0 rgb(0 0 0 / 10%);
 
     &:focus {
@@ -27,19 +28,19 @@ input {
 }
 
 button {
-    background: #cea35f;
+    background: $button-color;
+    color: $white;
     border: none;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 0.4rem;
-    margin-left: -20px;
-    font-size: 16px;
+    border-radius: 6px;
+    padding: $small-spacing $normal-spacing;
+    margin-left: -30px;
+    font-size: $huge-font-size;
     cursor: pointer;
 }
 
 .book-container {
-    background: #eee9e4;
-    padding: 40px;
-    margin: 40px;
+    background: $prime-color;
+    padding: $huge-spacing;
+    margin: $huge-spacing;
     border-radius: 30px;
 }
