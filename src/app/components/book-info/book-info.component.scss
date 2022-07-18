@@ -3,7 +3,7 @@
 .book-info-container {
     display: flex;
     align-items: center;
-    gap: $normal-spacing;
+    gap: $huge-spacing;
 }
 
 .book-details {
@@ -28,6 +28,7 @@
 
 .book-rating {
     margin-bottom: 16px;
+
     span {
         margin-right: 2px;
         color: #4f5b67;
