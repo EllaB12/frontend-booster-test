@@ -8,7 +8,7 @@ import { Book } from 'src/app/services/book.service';
 })
 export class BookInfoComponent implements OnInit {
   @Input() book!: Book;
-
+  
   constructor() { }
 
   ngOnInit(): void {
