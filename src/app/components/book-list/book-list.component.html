@@ -1,5 +1,14 @@
 <section class="book-list-container">
-    <div *ngFor="let book of books" class="book-info-container">
-        <app-book-info [book]="book"></app-book-info>
-    </div>
+    <ng-container *ngIf="books.length > 0; else booksPlaceholder">
+        <div *ngFor="let book of books" class="book-info-container">
+            <app-book-info [book]="book"></app-book-info>
+        </div>
+    </ng-container>
 </section>
+
+<ng-template #booksPlaceholder>
+    <p>
+        No books found. 
+        Please try again
+    </p>
+</ng-template>

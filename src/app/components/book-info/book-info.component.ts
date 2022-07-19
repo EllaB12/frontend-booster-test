@@ -8,10 +8,21 @@ import { Book } from 'src/app/services/book.service';
 })
 export class BookInfoComponent implements OnInit {
   @Input() book!: Book;
-  
+  isShowMore = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleModal() {
+    if (!this.isShowMore) {
+      this.isShowMore = true;
+      document.body.style.overflow = 'hidden';     
+    } else {
+      this.isShowMore = false;
+      document.body.style.overflow = 'auto';    
+    }
   }
 
 }

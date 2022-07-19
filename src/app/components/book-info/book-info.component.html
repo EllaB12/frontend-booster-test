@@ -1,5 +1,5 @@
 <div class="book-info-container">
-    <img class="book-img" [src]="book.volumeInfo.imageLinks.thumbnail">
+    <img class="book-img" [src]="book.volumeInfo.imageLinks?.thumbnail">
     <div class="book-details">
         <div class="book-rating">
             <span *ngFor="let _ of [].constructor(5); let i=index" 
@@ -12,5 +12,20 @@
                 {{author}}
             </span>
         </div>
+    
+        <button (click)="toggleModal()">Read More</button>
     </div>
 </div>
+
+<ng-container *ngIf="isShowMore">
+    <section class="modal">
+        <div class="modal-content">
+            <span class="close" (click)="toggleModal()">&times;</span>
+            <div class="book-description">
+                <div class="book-title">{{book.volumeInfo.title}}</div>
+                <p>{{book.volumeInfo.description}}</p>
+            </div>
+        </div>
+    </section>
+</ng-container>
+

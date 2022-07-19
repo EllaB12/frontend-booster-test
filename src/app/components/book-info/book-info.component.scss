@@ -9,6 +9,7 @@
 .book-details {
     display: flex;
     flex-direction: column;
+    align-items: start;
 }
 
 .book-img {
@@ -30,11 +31,64 @@
     margin-bottom: $normal-spacing;
 
     span {
-        margin-right: 2px;
+        margin-right: $xsmall-spacing;
         color: $grey;
 
         &.checked {
             color: orange;
           }
+    }
+}
+
+button {
+    background: transparent;
+    color: $button-color;
+    border: 1px solid $button-color;
+    border-radius: $small-radius;
+    padding: $small-spacing $normal-spacing;
+    margin-top: $small-spacing;
+    font-size: $huge-font-size;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;  
+    display: flex;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: $white;
+    margin: auto;
+    border: 1px solid #888;
+    border-radius: $small-radius;
+    max-width: 90%;
+    width: 500px;
+    padding: $normal-spacing;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    overflow: auto;
+}
+
+.close {
+    color: $light-grey;
+    align-self: end;
+    font-size: $title-font-size;
+    cursor: pointer;
+}
+
+.book-description {
+    padding: $large-spacing;
+}
+
+@media (min-width: 900px) {
+    .modal-content { 
+        height: fit-content;
     }
 }

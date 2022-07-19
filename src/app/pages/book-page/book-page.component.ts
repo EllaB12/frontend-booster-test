@@ -24,8 +24,13 @@ export class BookPageComponent implements OnInit {
 
   private _initForm() {
     this.bookForm = this.fb.group({
-      searchValue: this.fb.control(null, Validators.required),
+      searchValue: this.fb.control(null, [Validators.required, this._noWhitespaceValidator]),
     })
+  }
+
+  private _noWhitespaceValidator(control: FormControl) {
+    const isSpace = (control.value || '').match(/\s/g);
+    return isSpace ? {'whitespace': true} : null;
   }
 
   get searchValue() {
