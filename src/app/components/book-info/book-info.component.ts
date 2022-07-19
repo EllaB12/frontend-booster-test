@@ -18,7 +18,7 @@ export class BookInfoComponent implements OnInit {
   toggleModal() {
     if (!this.isShowMore) {
       this.isShowMore = true;
-      document.body.style.overflow = 'hidden';     
+      document.body.style.overflow = 'hidden';
     } else {
       this.isShowMore = false;
       document.body.style.overflow = 'auto';    
